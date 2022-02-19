@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarizer</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/static/css/jquery-ui.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header style="background-color: #1a025a;"
+        class="fixed inset-0 w-full flex flex-col justify-center justify-items-center content-center h-20 rounded-b-lg">
+        
+            <h1 align="center">
+				<font face="sans-serif" color="#ffffff" size="7">
+				TEXT SUMMARIZER
+                </font>
+			</h1>
+        
+    </header>
+
+    <section class="flex flex-wrap mt-20 w-full">
+        <div class="w-full md:w-1/2">
+            <form class="w-full flex flex-col md:h-screen" action="{{url_for('Summarize')}}" method="post">
+                <textarea style="background-color: #c8d3f8; font-size: xx-large;"
+                    class="w-11/12 md:h-3/4 m-2 p-2 border-blue-900 rounded-lg border self-center justify-center"
+                    name="data" id="data" cols="30" rows="10" placeholder="Enter your text"
+                    required="required"></textarea>
+                <div class="m-2 flex self-center">
+                    <h3><font face="sans-serif" color="#000000" size="6">
+                        Summary Length
+                        </font>
+                    </h3>
+                    <input type="range" class="m-2 min="20" max="1000" name="maxL">
+                </div>
+                <div class="flex self-center">
+                    <button class="m-1 bg-blue-700 hover:bg-blue-500 text-white font-semi-bold py-2 px-4 rounded-lg"
+                        style="height:60px;width:200px; font-size: xx-large" type="submit" onclick="Check()">Summarize</button>
+                    <button class="m-1 bg-red-500 hover:bg-pink-400 text-white font-semi-bold py-2 px-4 rounded-lg"
+                    style="height:60px;width:160px; font-size: xx-large" type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+        <div class="w-full md:w-1/2">
+            <div class="mt-2 flex flex-col w-full md:h-screen">
+                <textarea style="background-color: #d6d7fc; font-size: xx-large;" id="myInput"
+                    class="w-11/12 border-purple-900 rounded-lg p-2 border self-center justify-center md:h-3/4" rows="10"
+                    cols="30" name="result" readonly placeholder="Your Summary">{{result}}</textarea>
+                
+                <button
+                    class="m-4 bg-purple-700 hover:bg-purple-500 text-white font-semi-bold py-2 px-4 rounded-lg self-center"
+                    style="height:60px;width:180px; font-size: xx-large"
+                    onclick="myFunction()">Copy text</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        function myFunction() {
+            
+            var copyText = document.getElementById("myInput");
+
+            
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            
+
+            navigator.clipboard.writeText(copyText.value);
+            
+        }
+    </script>
+    <script>
+        function Check() {
+
+            var reg = /<(.|\n)*>/g;
+
+            if (reg.test(document.getElementById("data").value) == true) {
+                var ErrorText = 'Make Sure You Provide Valid Data.';
+                alert('Error Text');
+
+            }
+        }
+    </script>
+
+    
+    <footer style="background-color: #8894fc;">
+        <hr color="#000">
+        <p align="center">
+            <a href="index.html"><font face="sans-serif" size="7" color="#1a025a">TEXT SUMMARIZER</font>
+            </a>
+        </p>
+        <p align="center">
+            <font face="sans-serif" size="5" color="1a025a">
+                Copyright @ 2022. All Rights Reserved.
+                Made by Anweasha Saha.
+            </font>
+        </p>
+    </footer>
+    
+
+</body>
+
+</html>
