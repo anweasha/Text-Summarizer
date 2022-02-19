@@ -1,2 +1,2 @@
 web: gunicorn app:app
-web: gunicorn run:text----summarizer
+web: gunicorn run:app
