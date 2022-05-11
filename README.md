@@ -21,6 +21,8 @@ In this project, I have made the use of abstractive summarization with the help 
 - He/she can specify the length of the desired summary.
 - After getting the summary, the user can copy the text to clipboard to use it somewhere else.
 
+<br>
+
 > **WEB APPLICATION -** [Text Summarizer](http://anweasha.pythonanywhere.com/Summarize)
 <br>
 
