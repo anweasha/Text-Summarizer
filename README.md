@@ -21,6 +21,12 @@ In this project, I have made the use of abstractive summarization with the help 
 - He/she can specify the length of the desired summary.
 - After getting the summary, the user can copy the text to clipboard to use it somewhere else.
 
+> **WEB APPLICATION -** [Text Summarizer](http://anweasha.pythonanywhere.com/Summarize)
+<img src="https://github.com/anweasha/Text-Summarizer/blob/main/images/image_1.png" width=700><br>
+<br><img src="https://github.com/anweasha/Text-Summarizer/blob/main/images/image_2.png" width=700><br>
+<br><img src="https://github.com/anweasha/Text-Summarizer/blob/main/images/image_3.png" width=700><br>
+<br><img src="https://github.com/anweasha/Text-Summarizer/blob/main/images/image_4.png" width=700><br>
+
 ## Tech Stacks:
 - [Hugging Face](https://huggingface.co)
 - Transformers
