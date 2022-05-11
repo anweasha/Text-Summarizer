@@ -22,6 +22,8 @@ In this project, I have made the use of abstractive summarization with the help 
 - After getting the summary, the user can copy the text to clipboard to use it somewhere else.
 
 > **WEB APPLICATION -** [Text Summarizer](http://anweasha.pythonanywhere.com/Summarize)
+<br>
+
 <img src="https://github.com/anweasha/Text-Summarizer/blob/main/images/image_1.png" width=700><br>
 <br><img src="https://github.com/anweasha/Text-Summarizer/blob/main/images/image_2.png" width=700><br>
 <br><img src="https://github.com/anweasha/Text-Summarizer/blob/main/images/image_3.png" width=700><br>
@@ -30,6 +32,7 @@ In this project, I have made the use of abstractive summarization with the help 
 ## Tech Stacks:
 - [Hugging Face](https://huggingface.co)
 - Transformers
+- Natural Language Processing (NLP)
 - Python
 
 ## References:
